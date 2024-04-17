@@ -9,5 +9,42 @@
 <strong>Usage Guide</strong>
 
 <p>The page gets displayed once a user has signed up, which will trigger the "Register Participants" event.  </p>
+
+
+  <script>
+  // 1. When squatch.js is ready, run the following function.
+  window.impactOnReady = function(){
+    // 2. Configure squatch-js for your user and widget.
+    //  The information provided here is used to track your user and register them in Advocate
+    //  This request is authenticated via JWT
+    //  A note about generating JWTs:
+    //    JWT's are tokens that are signed with your tenant API key. They must be generated server-side.
+    //    To ensure the security of your tenant and program, do not expose your tenant API key to your frontend
+    //    For more information see https://integrations.impact.com/impact-brand/docs/json-web-tokens
+    const userConfig = {
+        // 2b. Add details about your user
+        //  This must include id and account id but other fields such as email, first name, locale or even custom fields can be included
+        //  For more details and a list of user fields see https://integrations.impact.com/impact-brand/docs/install-the-utt
+        user: {                               
+        id: 'test1@referred.com',                      
+        accountId: 'test1@referred.com',       
+        email: 'test1@referred.com',      
+        firstName: 'Test1',
+    		lastName: 'Referred',
+        },
+        // 2c. Add your generated JWT here to authenticate your request
+        jwt:'eyJhbGciOiJIUzI1NiIsImtpZCI6IklSVXRYZVJadm5IcjUzOTgxNTNMUzdlTkp1WGZlNjU1MzUifQ.eyJ1c2VyIjp7ImlkIjoidGVzdDFAcmVmZXJyZWQuY29tIiwiYWNjb3VudElkIjoidGVzdDFAcmVmZXJyZWQuY29tIiwiZW1haWwiOiJ0ZXN0MUByZWZlcnJlZC5jb20iLCJmaXJzdE5hbWUiOiJUZXN0MSIsImxhc3ROYW1lIjoiUmVmZXJyZWQiLCJyZWZlcnJlZEJ5Q29kZXMiOlsiQ0hBUkxFU1RFU1QiXX19.6uG5TwyvH0iRjpx6O8vpYbIcWIlt-x51x0nmqX5rXY0'
+    };
+    // 3. Make the request to upsert your user.
+
+    impact.api().upsertUser(userConfig).then(function(response) {
+        // The widget API automatically inserts the HTML for your widget into your page via an iFrame
+        // However if needed, you can retrieve details about the upserted user and the widget HTML through this function response
+        const user = response.user;
+    }).catch(function(error){
+        console.log(error);
+    });
+  };
+</script>
   
 </body>
