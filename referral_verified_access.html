@@ -8,8 +8,14 @@
 
 <body>
 
+<strong>Usage Guide</strong>
+
+<p>This is a verified access page, which should only visible once a user has logged into their account</p>
+<p>Based on the user logged in, the brand will need to generate a dynamic JSON Web Token (JWT), which is used to determine the Referrer </p>
+<p>In the example below, we've hardcoded the Referrer to referrer@test.com </p>
+
 <script> 
-  window.impactToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IklSVXRYZVJadm5IcjUzOTgxNTNMUzdlTkp1WGZlNjU1MzUifQ.eyJ1c2VyIjp7ImlkIjoiY2hhcmxlc0B0ZXN0LmNvbSIsImFjY291bnRJZCI6ImNoYXJsZXNAdGVzdC5jb20iLCJlbWFpbCI6ImNoYXJsZXNAdGVzdC5jb20ifX0.oTHHFIoZIsrhMdF2U643tYUJlOX3qw7X0iNZX8Uz8Bw";
+  window.impactToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IklSVXRYZVJadm5IcjUzOTgxNTNMUzdlTkp1WGZlNjU1MzUifQ.eyJ1c2VyIjp7ImlkIjoicmVmZXJyZXJAdGVzdC5jb20iLCJhY2NvdW50SWQiOiJyZWZlcnJlckB0ZXN0LmNvbSIsImVtYWlsIjoicmVmZXJyZXJAdGVzdC5jb20ifX0.X13LITiuqf8mo0UK5BDJ6UQGf-EWtd4VErZM6brdsVU";
 </script> 
 
 <impact-embed widget="p/24728/w/websiteReferralWidget"><div>Loading...</div></impact-embed>
