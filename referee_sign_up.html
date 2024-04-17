@@ -11,7 +11,7 @@
 <p>The page gets displayed once a user has signed up, which will trigger the "Register Participants" event.  </p>
 
 
-  <script>
+<script>
   // 1. When squatch.js is ready, run the following function.
   window.impactOnReady = function(){
     // 2. Configure squatch-js for your user and widget.
@@ -31,6 +31,7 @@
         email: 'test1@referred.com',      
         firstName: 'Test1',
     		lastName: 'Referred',
+        referredByCodes: ["CHARLESTEST"],
         },
         // 2c. Add your generated JWT here to authenticate your request
         jwt:'eyJhbGciOiJIUzI1NiIsImtpZCI6IklSVXRYZVJadm5IcjUzOTgxNTNMUzdlTkp1WGZlNjU1MzUifQ.eyJ1c2VyIjp7ImlkIjoidGVzdDFAcmVmZXJyZWQuY29tIiwiYWNjb3VudElkIjoidGVzdDFAcmVmZXJyZWQuY29tIiwiZW1haWwiOiJ0ZXN0MUByZWZlcnJlZC5jb20iLCJmaXJzdE5hbWUiOiJUZXN0MSIsImxhc3ROYW1lIjoiUmVmZXJyZWQiLCJyZWZlcnJlZEJ5Q29kZXMiOlsiQ0hBUkxFU1RFU1QiXX19.6uG5TwyvH0iRjpx6O8vpYbIcWIlt-x51x0nmqX5rXY0'
