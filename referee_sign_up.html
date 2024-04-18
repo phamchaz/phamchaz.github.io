@@ -17,7 +17,7 @@
 
 <p>The Referee is being credited based on the first-party cookie dropped by the UTT </p>
   
-<script>
+  <script>
   // 1. When squatch.js is ready, run the following function.
   window.impactOnReady = function(){
     // 2. Configure squatch-js for your user and widget.
@@ -32,16 +32,15 @@
         //  This must include id and account id but other fields such as email, first name, locale or even custom fields can be included
         //  For more details and a list of user fields see https://integrations.impact.com/impact-brand/docs/install-the-utt
         user: {                               
-        id: 'test5@referred.com',                      
-        accountId: 'test5@referred.com',       
-        email: 'test5@referred.com',      
-        firstName: 'Test5',
-    		lastName: 'Referred5',
-        //The line belows credit the Referee based on the unique code. Commenting out so we credit based on UTT's first party cookie instead
+        id: 'api1@referred.com',                      
+        accountId: 'api1@referred.com',       
+        email: 'api1@referred.com',      
+        firstName: 'Api1',
+    		lastName: 'Test1',
         //referredByCodes: ["CHARLESTEST"],
         },
         // 2c. Add your generated JWT here to authenticate your request
-        jwt:'eyJhbGciOiJIUzI1NiIsImtpZCI6IklSVXRYZVJadm5IcjUzOTgxNTNMUzdlTkp1WGZlNjU1MzUifQ.eyJ1c2VyIjp7ImlkIjoidGVzdDVAcmVmZXJyZWQuY29tIiwiYWNjb3VudElkIjoidGVzdDVAcmVmZXJyZWQuY29tIiwiZmlyc3ROYW1lIjoiVGVzdDUiLCJsYXN0TmFtZSI6IlJlZmVycmVkNSIsImVtYWlsIjoidGVzdDVAcmVmZXJyZWQuY29tIn19.wO3gdPEh8ILjln_m2SPftfCXO-4BmVZs91z2IFi2bxM'
+        jwt:'eyJhbGciOiJIUzI1NiIsImtpZCI6IklSVXRYZVJadm5IcjUzOTgxNTNMUzdlTkp1WGZlNjU1MzUifQ.eyJ1c2VyIjp7ImlkIjoiYXBpMUByZWZlcnJlZC5jb20iLCJhY2NvdW50SWQiOiJhcGkxQHJlZmVycmVkLmNvbSIsImZpcnN0TmFtZSI6IkFwaTEiLCJsYXN0TmFtZSI6IlRlc3QxIiwiZW1haWwiOiJhcGkxQHRlc3QuY29tIn19.BTA51vVKRnAoZKTmvoDO_5e2-0L4xaf9-NnCKeWVCvQ'
     };
     // 3. Make the request to upsert your user.
 
@@ -54,7 +53,6 @@
     });
   };
 </script>
-
 <a href="https://phamchaz.github.io/referee_sale.html">Click here to trigger the Online Sale event</a>
   
 </body>
